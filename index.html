@@ -1,45 +1,109 @@
 <html>
 <head>
-<title> quiz application UI</title>
+<title>Quiz Application UI</title>
+<style>
+body {
+background-color: lavender;
+font-family: Arial;
+}
+h2 {
+text-align: center;
+color: darkblue;
+}
+i {
+display: block;
+text-align: center;
+margin-bottom: 10px;
+}
+.progress {
+width: 50%;
+margin: auto;
+height: 8px;
+background-color: lightgray;
+margin-bottom: 10px;
+}
+.progress-fill {
+height: 100%;
+width: 100%;
+background-color: green;
+animation: timer 20s linear forwards;
+}
+@keyframes timer {
+from { width: 100%; background-color: green; }
+to { width: 0%; background-color: red; }
+}
+form {
+width: 50%;
+margin: auto;
+background-color: pink;
+padding: 20px;
+border-radius: 15px;  
+}
+p {
+font-size: 18px;
+}
+label {
+font-size: 16px;
+}
+input[type="radio"] {
+margin-right: 8px;
+}
+input[type="radio"]:hover {
+    transform: scale(1.2);
+}
+input[type="submit"] {
+display: block;
+margin: auto;
+background-color: darkblue;
+color: white;
+padding: 10px;
+font-size: 16px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: green;
+}
+</style>
 </head>
-<body bgcolor="lavender">
-<center>
-<h2><b>Interactive Quiz Application</b></h2>
+<body>
+<h2>Interactive Quiz Application</h2>
 <i>Let's solve Quiz!!</i>
-</center>
-<hr></hr>
+<hr>
+<div class="progress">
+    <div class="progress-fill"></div>
+</div>
 <form>
 <p><b>1. Which planet is known as the red planet?</b></p>
-<input type="radio" name="q1"> Jupiter<br>
-<input type="radio" name="q1"> Mars<br>
-<input type="radio" name="q1"> Earth<br>
-<input type="radio" name="q1"> <br>
+<input type="radio" name="q1" required> <label>Jupiter</label><br>
+<input type="radio" name="q1"> <label>Mars</label><br>
+<input type="radio" name="q1"> <label>Earth</label><br>
+<input type="radio" name="q1"> <label>Venus</label><br>
 <br>
 <p><b>2. I speak without a mouth and hear without ears. What am I?</b></p>
-<input type="radio" name="q2"> wind<br>
-<input type="radio" name="q2"> cloud<br>
-<input type="radio" name="q2"> echo<br>
-<input type="radio" name="q2"> tree<br>
+<input type="radio" name="q2" required> <label>Wind</label><br>
+<input type="radio" name="q2"> <label>Cloud</label><br>
+<input type="radio" name="q2"> <label>Echo</label><br>
+<input type="radio" name="q2"> <label>Tree</label><br>
 <br>
 <p><b>3. Which language is used for web pages?</b></p>
-<input type="radio" name="q3"> Python<br>
-<input type="radio" name="q3"> HTML<br>
-<input type="radio" name="q3"> C++<br>
-<input type="radio" name="q3"> Java<br>
+<input type="radio" name="q3" required> <label>Python</label><br>
+<input type="radio" name="q3"> <label>HTML</label><br>
+<input type="radio" name="q3"> <label>C++</label><br>
+<input type="radio" name="q3"> <label>Java</label><br>
 <br>
 <p><b>4. What is 2 + 2?</b></p>
-<input type="radio" name="q4"> 3<br>
-<input type="radio" name="q4"> 4<br>
-<input type="radio" name="q4"> 5<br>
-<input type="radio" name="q4"> 6<br>
+<input type="radio" name="q4" required> <label>3</label><br>
+<input type="radio" name="q4"> <label>4</label><br>
+<input type="radio" name="q4"> <label>5</label><br>
+<input type="radio" name="q4"> <label>6</label><br>
 <br>
 <p><b>5. Which is the largest ocean on Earth?</b></p>
-<input type="radio" name="q5"> Atlantic Ocean<br>
-<input type="radio" name="q5"> Indian Ocean<br>
-<input type="radio" name="q5"> Pacific Ocean<br>
-<input type="radio" name="q5"> Arctic Ocean<br>
-<br>
-<input type="submit" value="Submit">
+<input type="radio" name="q5" required> <label>Atlantic Ocean</label><br>
+<input type="radio" name="q5"> <label>Indian Ocean</label><br>
+<input type="radio" name="q5"> <label>Pacific Ocean</label><br>
+<input type="radio" name="q5"> <label>Arctic Ocean</label><br>
+<br><br>
+<input type="submit" value="Submit Quiz">
 </form>
 </body>
 </html>
